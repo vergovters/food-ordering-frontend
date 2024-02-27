@@ -1,9 +1,10 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import Layot from "./layout/layot";
 
 export const AppRoutes = () => {
     return(
         <Routes>
-            <Route path="/" element={<span>Works</span>}/>
+            <Route path="/" element={<Layot>HomePage</Layot>}/>
             <Route path="/user-profile" element={<span>profile</span>}/>
             <Route path="*" element={<Navigate to="/" />} />
         </Routes>
