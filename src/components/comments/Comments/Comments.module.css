@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+
+
+.comments {
+    margin-top: 150px;
+    display: flex;
+    padding: 64px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.title {
+    font-family: Nunito Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.title__span {
+    color: #3586ff;
+}
+
+.comments__posts {
+    margin-top: 40px;
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    align-self: stretch;
+}
+
+@media (max-width: 768px) {
+    .comments {
+      padding: 24px; /* Adjust padding for smaller screens */
+    }
+  
+    .title {
+      font-size: 18px; /* Decrease title font size for smaller screens */
+    }
+  
+    .comments__posts {
+      flex-direction: column; /* Stack posts vertically on smaller screens */
+      gap: 20px; /* Reduce gap between posts for smaller screens */
+    }
+  }
