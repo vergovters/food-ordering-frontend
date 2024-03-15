@@ -16,16 +16,16 @@ const formSchema = z.object({
 export type UserFormData = z.infer<typeof formSchema>;
 
 type Props = {
-    //currentUser: User;
-    //onSave: (userProfileData: UserFormData) => void;
-    //isLoading: boolean;
+    // currentUser: User;
+    onSave: (userProfileData: UserFormData) => void;
+    isLoading: boolean;
     title?: string;
     buttonText?: string;
 };
 
 const UserProfileForm = ({
-    //onSave,
-    //isLoading,
+    onSave,
+    isLoading,
     //currentUser,
     title = "User Profile",
     buttonText = "Submit",
@@ -38,7 +38,7 @@ const UserProfileForm = ({
     return (
         <Form {...form}>
             <form
-                //onSubmit={form.handleSubmit(onSave)}
+                onSubmit={form.handleSubmit(onSave)}
                 className="space-y-4 bg-gray-50 rounded-lg md:p-10"
             >
                  <div>
@@ -68,7 +68,7 @@ const UserProfileForm = ({
                         <FormControl>
                             <Input {...field} className="bg-white" />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage/>
                         </FormItem>
                 )}
                 />
@@ -113,10 +113,10 @@ const UserProfileForm = ({
                         )}
                     />
                 </div>
-                {true ? (
+                {isLoading ? (
                     <LoadingButton />
                     ) : (
-                    <button type="submit" className="bg-orange-500">
+                    <button type="submit" className="bg-blue-500 p-2 rounded-sm text-white">
                         {buttonText}
                     </button>
                 )}
