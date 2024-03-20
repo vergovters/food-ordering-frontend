@@ -13,7 +13,7 @@ export const useCreateRestaurant = () => {
     ): Promise<Restaurant> => {
       const accessToken = await getAccessTokenSilently();
   
-      const response = await fetch(`${API_BASE_URL}/api/my/restaurant`, {
+      const response = await fetch(`${API_BASE_URL}/api/restaurant`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accessToken}`,
