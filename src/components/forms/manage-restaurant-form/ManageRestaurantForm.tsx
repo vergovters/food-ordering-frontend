@@ -6,6 +6,9 @@ import { z } from "zod";
 import DetailsSection from "./DetailsSection";
 import { Separator } from "@/components/ui/separator";
 import CuisinesSection from "./CuisinesSection";
+import MenuSection from "./MenuSection";
+import ImageSection from "./ImageSectiom";
+import LoadingButton from "@/components/LoadingButton";
 
 const formSchema = z
   .object({
@@ -105,6 +108,10 @@ const ManageRestaurantForm = ({ onSave, isLoading,}: Props) => {
             <Separator/>
             <CuisinesSection/>
             <Separator/>
+            <MenuSection/>
+            <Separator/>
+            <ImageSection/>
+            {isLoading ? <LoadingButton /> : <button type="submit">Submit</button>}
         </form>
         </Form>
     )
