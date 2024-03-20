@@ -47,7 +47,7 @@ type CreateUserRequest = {
     email: string;
 };
   
-export const useCreateMyUser = () => {
+export const useCreateUser = () => {
     const { getAccessTokenSilently } = useAuth0();
   
     const createUserRequest = async (user: CreateUserRequest) => {
