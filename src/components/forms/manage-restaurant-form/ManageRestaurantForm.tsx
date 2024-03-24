@@ -136,7 +136,7 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
         <MenuSection />
         <Separator />
         <ImageSection />
-        {isLoading ? <LoadingButton /> : <button type="submit">Submit</button>}
+        {isLoading ? <LoadingButton /> : <button type="submit" className="bg-blue-500 p-2 rounded-sm text-white">Submit</button>}
       </form>
     </Form>
   );
