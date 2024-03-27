@@ -29,7 +29,7 @@ const UserProfileForm = ({
     onSave,
     isLoading,
     currentUser,
-    title = "User Profile",
+    title = "USER PROFILE",
     buttonText = "Submit",
   }: Props) => {
     const form = useForm<UserFormData>({
@@ -45,87 +45,94 @@ const UserProfileForm = ({
         <Form {...form}>
             <form
                 onSubmit={form.handleSubmit(onSave)}
-                className="space-y-4 bg-gray-50 rounded-lg md:p-10"
+                className=" bg-gray-50 rounded-lg md:p-5 border-solid border-2 border-sky-500 flex"
+
             >
-                 <div>
-                    <h2 className="text-2xl font-bold">{title}</h2>
-                    <FormDescription>
-                        View and change your profile information here
-                    </FormDescription>
+                <div>
+                    <img src="https://i.pinimg.com/originals/e8/28/66/e82866c68c3dd3f148320871dbb825b3.jpg" alt="" className="rounded-l-lg"/>
                 </div>
-                <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                        <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                            <Input {...field} disabled className="bg-white" />
-                        </FormControl>
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                        <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl>
-                            <Input {...field} className="bg-white" />
-                        </FormControl>
-                        <FormMessage/>
-                        </FormItem>
-                )}
-                />
-                  <div className="flex flex-col md:flex-row gap-4">
-                    <FormField
-                        control={form.control}
-                        name="addressLine1"
-                        render={({ field }) => (
-                        <FormItem className="flex-1">
-                            <FormLabel>Address Line 1</FormLabel>
-                            <FormControl>
-                            <Input {...field} className="bg-white" />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
+                <div className="ml-[100px] mt-[100px]">
+                        <div className="mt-2 mb-6">
+                            <h2 className="text-4xl font-bold">{title}</h2>
+                            <FormDescription>
+                                View and change your profile information here
+                            </FormDescription>
+                        </div>
+                        <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field }) => (
+                                <FormItem>
+                                <FormLabel>Email</FormLabel>
+                                <FormControl>
+                                    <Input {...field} disabled className="bg-white" />
+                                </FormControl>
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="name"
+                            render={({ field }) => (
+                                <FormItem>
+                                <FormLabel>Name</FormLabel>
+                                <FormControl>
+                                    <Input {...field} className="bg-white" />
+                                </FormControl>
+                                <FormMessage/>
+                                </FormItem>
                         )}
-                    />
-                    <FormField
-                        control={form.control}
-                        name="city"
-                        render={({ field }) => (
-                        <FormItem className="flex-1">
-                            <FormLabel>City</FormLabel>
-                            <FormControl>
-                            <Input {...field} className="bg-white" />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
+                        />
+                        <div className="flex flex-col md:flex-row gap-4">
+                            <FormField
+                                control={form.control}
+                                name="addressLine1"
+                                render={({ field }) => (
+                                <FormItem className="flex-1">
+                                    <FormLabel>Address Line 1</FormLabel>
+                                    <FormControl>
+                                    <Input {...field} className="bg-white" />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                                )}
+                            />
+                            <FormField
+                                control={form.control}
+                                name="city"
+                                render={({ field }) => (
+                                <FormItem className="flex-1">
+                                    <FormLabel>City</FormLabel>
+                                    <FormControl>
+                                    <Input {...field} className="bg-white" />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                                )}
+                            />
+                            <FormField
+                                control={form.control}
+                                name="country"
+                                render={({ field }) => (
+                                <FormItem className="flex-1">
+                                    <FormLabel>Country</FormLabel>
+                                    <FormControl>
+                                    <Input {...field} className="bg-white" />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                                )}
+                            />
+                        </div>
+                        {isLoading ? (
+                            <LoadingButton />
+                            ) : (
+                            <button type="submit" className="bg-blue-500 p-2 rounded-sm w-[600px] text-white mt-5">
+                                {buttonText}
+                            </button>
                         )}
-                    />
-                    <FormField
-                        control={form.control}
-                        name="country"
-                        render={({ field }) => (
-                        <FormItem className="flex-1">
-                            <FormLabel>Country</FormLabel>
-                            <FormControl>
-                            <Input {...field} className="bg-white" />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                        )}
-                    />
                 </div>
-                {isLoading ? (
-                    <LoadingButton />
-                    ) : (
-                    <button type="submit" className="bg-blue-500 p-2 rounded-sm text-white">
-                        {buttonText}
-                    </button>
-                )}
+                
             </form>
         </Form>
     )
