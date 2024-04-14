@@ -6,6 +6,7 @@ import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import ManageRestaurantPage from "./pages/ManageRestaurantPage";
 import SearchPage from "./pages/SearchPage";
+import DetailPage from "./pages/DetailPage";
 
 export const AppRoutes = () => {
     return(
@@ -16,6 +17,8 @@ export const AppRoutes = () => {
                 <Route path="/user-profile" element={<Layot><UserProfilePage/></Layot>}/>
                 <Route path="/manage-restaurant" element={<Layot><ManageRestaurantPage/></Layot>}/>
                 <Route path="/search/:city" element={<Layot><SearchPage/></Layot>}/>
+                <Route path="/search/:city" element={<Layot><SearchPage/></Layot>}/>
+                <Route path="/detail/:restaurantId" element={<Layot><DetailPage/></Layot>}/>
             </Route>
             <Route path="*" element={<Navigate to="/" />} />
         </Routes>
