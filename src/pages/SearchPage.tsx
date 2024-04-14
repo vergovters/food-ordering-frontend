@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import CuisineFilter from "@/components/CuisineFilter";
 import PaginationSelector from "@/components/PaginationSelector";
 import SearchBar, { SearchForm } from "@/components/SearchBar";
+import SearchResultInfo from "@/components/SearchResultInfo";
+import SearchResultCard from "@/components/SearchResultCard";
 
 
 export type SearchState = {
@@ -23,6 +25,22 @@ const SearchPage = () => {
 
     const {city} = useParams() 
     const {results, isLoading} = useSearchRestaurants(searchState, city)
+
+    const setSearchQuery = (searchFormData: SearchForm) => {
+        setSearchState((prevState) => ({
+          ...prevState,
+          searchQuery: searchFormData.searchQuery,
+          page: 1,
+        }));
+      };
+
+      const resetSearch = () => {
+        setSearchState((prevState) => ({
+          ...prevState,
+          searchQuery: "",
+          page: 1,
+        }));
+      };
 
     if (isLoading) {
         <span>Loading ...</span>;
