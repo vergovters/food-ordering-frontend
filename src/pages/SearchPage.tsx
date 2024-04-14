@@ -42,6 +42,13 @@ const SearchPage = () => {
         }));
       };
 
+      const setPage = (page: number) => {
+        setSearchState((prevState) => ({
+          ...prevState,
+          page,
+        }));
+      };
+
     if (isLoading) {
         <span>Loading ...</span>;
       }
