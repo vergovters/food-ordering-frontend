@@ -6,6 +6,7 @@ import PaginationSelector from "@/components/PaginationSelector";
 import SearchBar, { SearchForm } from "@/components/SearchBar";
 import SearchResultInfo from "@/components/SearchResultInfo";
 import SearchResultCard from "@/components/SearchResultCard";
+import SortOptionDropdown from "@/components/SortOptionDropdown";
 
 
 export type SearchState = {
@@ -46,6 +47,24 @@ const SearchPage = () => {
         setSearchState((prevState) => ({
           ...prevState,
           page,
+        }));
+      };
+
+      const setSelectedCuisines = (selectedCuisines: string[]) => {
+        setSearchState((prevState) => ({
+          ...prevState,
+          selectedCuisines,
+          page: 1,
+        }));
+      };
+
+      const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
+      const setSortOption = (sortOption: string) => {
+        setSearchState((prevState) => ({
+          ...prevState,
+          sortOption,
+          page: 1,
         }));
       };
 
