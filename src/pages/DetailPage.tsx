@@ -1,10 +1,26 @@
 import { useGetRestaurant } from '@/api/ResApi';
+import MenuItem from '@/components/MenuItem';
+import RestaurantInfo from '@/components/RestaurantInfo';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-// Assuming your URL parameter is named 'id'
+export type CartItem = {
+    _id: string;
+    name: string;
+    price: number;
+    quantity: number;
+};
+
 const DetailPage = () => {
     const { restaurantId } = useParams<{ restaurantId: string }>();
     const { restaurant, isLoading } = useGetRestaurant(restaurantId);
+
+    const [cartItems, setCartItems] = useState<CartItem[]>(() => {
+        const storedCartItems = sessionStorage.getItem(`cartItems-${restaurantId}`);
+        return storedCartItems ? JSON.parse(storedCartItems) : [];
+    });
+
 
     if (isLoading || !restaurant) {
         return "Loading...";
