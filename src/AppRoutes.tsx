@@ -13,12 +13,11 @@ export const AppRoutes = () => {
         <Routes>
             <Route path="/" element={<Layot showHero><HomePage/></Layot>}/>
             <Route path="/auth-callback" element={<AuthCallbackPage/>}/>
+            <Route path="/search/:city" element={<Layot><SearchPage/></Layot>}/>
+            <Route path="/detail/:restaurantId" element={<Layot><DetailPage/></Layot>}/>
             <Route element={<ProtectedRoute/>}>
                 <Route path="/user-profile" element={<Layot><UserProfilePage/></Layot>}/>
                 <Route path="/manage-restaurant" element={<Layot><ManageRestaurantPage/></Layot>}/>
-                <Route path="/search/:city" element={<Layot><SearchPage/></Layot>}/>
-                <Route path="/search/:city" element={<Layot><SearchPage/></Layot>}/>
-                <Route path="/detail/:restaurantId" element={<Layot><DetailPage/></Layot>}/>
             </Route>
             <Route path="*" element={<Navigate to="/" />} />
         </Routes>

@@ -8,6 +8,8 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { MenuItem as MenuItemType } from "../types";
 import CheckoutButton from '@/components/CheckoutButton';
+import { UserFormData } from '@/components/forms/user-profile-form/UserProfileForm';
+import { useCreateCheckoutSession } from '@/api/OrderApi';
 
 export type CartItem = {
     _id: string;
@@ -19,6 +21,8 @@ export type CartItem = {
 const DetailPage = () => {
     const { restaurantId } = useParams<{ restaurantId: string }>();
     const { restaurant, isLoading } = useGetRestaurant(restaurantId);
+    const { createCheckoutSession, isLoading: isCheckoutLoading } =
+    useCreateCheckoutSession();
 
     const [cartItems, setCartItems] = useState<CartItem[]>(() => {
         const storedCartItems = sessionStorage.getItem(`cartItems-${restaurantId}`);
@@ -147,3 +151,5 @@ const DetailPage = () => {
   };
 
 export default DetailPage;
+
+
