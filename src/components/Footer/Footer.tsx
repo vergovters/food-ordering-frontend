@@ -1,63 +1,81 @@
-import React from 'react';
-import {BsFacebook, BsTwitter, BsLinkedin, BsInstagram} from "react-icons/bs"
-import styles from "./Footer.module.css"
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
     return (
-      <footer className={styles.footer}>
-        <div className={styles.waves}>
-          <div className={`${styles.wave} ${styles.wave1}`} id="wave1"></div>
-          <div className={`${styles.wave} ${styles.wave2}`} id="wave2"></div>
-          <div className={`${styles.wave} ${styles.wave3}`} id="wave3"></div>
-          <div className={`${styles.wave} ${styles.wave4}`} id="wave4"></div>
+      <div className="flex flex-col items-center justify-center max-w-screen-lg mx-auto">
+        
+        <div className="flex font-body gap-[85px] mb-6">
+          <div>
+              <h3  className="text-red-500 font-bold text-[25px]">
+                GastroHeaven
+              </h3>
+              <p className="text-[20px]">Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit,<br/> sed do eiusmod tempor</p>
+              <ul className="flex text-yellow-500 gap-3 text-[22px] mt-2">
+                  <li>
+                    <FaFacebookF/>
+                  </li>
+                  <li>
+                    <FaTwitter/>
+                  </li>
+                  <li>
+                    <FaInstagram/>
+                  </li>
+              </ul>
+          </div>
+          <div>
+            <h3  className="text-red-500 font-bold text-[25px]">
+              About Us
+            </h3>
+            <ul className="flex-col text-[18]">
+                  <li>
+                    About Us
+                  </li>
+                  <li>
+                    Service Us
+                  </li>
+                  <li>
+                   Contact
+                  </li>
+                  <li>
+                   Company
+                  </li>
+              </ul>
+          </div>
+          <div>
+            <h3  className="text-red-500 font-bold text-[25px]">
+              Company
+            </h3>
+            <ul className="flex-col text-[18]">
+                  <li>
+                    Partnership
+                  </li>
+                  <li>
+                    Terms of Use
+                  </li>
+                  <li>
+                    Privacy
+                  </li>
+                  <li>
+                    Sitemap
+                  </li>
+              </ul>
+          </div>
+          <div>
+              <h3  className="text-red-500 font-bold text-[25px]">
+                 Get in touch
+              </h3>
+              <p className="mb-5">Lorem ipsum dolor sit amet, consectetur<br/> adipiscingelit, sed do eiusmod tempor</p>
+              <button className="bg-[#F54748] text-white py-3 px-6 rounded-[32px] transform hover:translate-y-[-3px] transition-all duration-300 h-fit mt-auto">
+                        Subscribe
+              </button>
+          </div>
+          
         </div>
-        <ul className={styles.social_icon}>
-          <li className={styles.social_icon__item}>
-            <a className={styles.social_icon__link} href="#">
-              <BsFacebook />
-            </a>
-          </li>
-          <li className={styles.social_icon__item}>
-            <a className={styles.social_icon__link} href="#">
-              <BsTwitter />
-            </a>
-          </li>
-          <li className={styles.social_icon__item}>
-            <a className={styles.social_icon__link} href="#">
-              <BsLinkedin />
-            </a>
-          </li>
-          <li className={styles.social_icon__item}>
-            <a className={styles.social_icon__link} href="#">
-              <BsInstagram />
-            </a>
-          </li>
-        </ul>
-        <ul className={styles.menu}>
-          <li className={styles.menu__item}>
-            <a className={styles.menu__link} href="#">
-              Home
-            </a>
-          </li>
-          <li className={styles.menu__item}>
-            <a className={styles.menu__link} href="#">
-              About
-            </a>
-          </li>
-          <li className={styles.menu__item}>
-            <a className={styles.menu__link} href="#">
-              Services
-            </a>
-          </li>
-          <li className={styles.menu__item}>
-            <a className={styles.menu__link} href="#">
-              Contact
-            </a>
-          </li>
-        </ul>
-        <p>&copy;2024 GastroHaven | Food of ukraine</p>
-      </footer>
-    );
-  };
+        <p className="w-fit">Copyright © 2024 GastroHeaven.</p>
+      </div>
+    )
+}
   
   export default Footer;

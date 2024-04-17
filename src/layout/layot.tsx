@@ -16,6 +16,7 @@ const Layot = ({ children, showHero }: Props) => {
         <div className="container mx-auto flex-1 py-10">
             {children}
         </div>
+        <hr className="border-t border-red-300 my-8" />
         <Footer/>
     </div>
   )

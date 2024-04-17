@@ -11,7 +11,7 @@ const users = [
     location: 'Seoul, South Korea',
     date: 'April 2019',
     rate: 4,
-    text: 'What a great experience using SkyWings.Express! I booked all of my flights for my gap year through SkyWings.Express and never had any issues.',
+    text: 'What a great experience using GastroHeaven! I booked all of my food for my gap year through GastroHeaven and never had any issues.',
   },
   {
     imgUrl: pfp2,
@@ -19,7 +19,7 @@ const users = [
     location: 'Honolulu, Hawaii',
     date: 'February 2020',
     rate: 5,
-    text: 'My family and I visit Hawaii every year, and we usually book our flights using other services. SkyWings.Express was recommened to us by a long time friend',
+    text: 'My family and I visit Hawaii every year, and we usually book our restaurant using other services. GastroHeaven was recommened to us by a long time friend',
   },
   {
     imgUrl: pfp3,
@@ -27,7 +27,7 @@ const users = [
     location: 'Berlin, Germany',
     date: 'April 2022',
     rate: 4,
-    text: 'When I was looking to book my flight to Berlin from LAX,  SkyWings.Express had the best browsing experiece so I figured I’d give it a try.',
+    text: 'When I was looking to order my food to Berlin from LAX,  GastroHeaven had the best browsing experiece so I figured I’d give it a try.',
   },
 ];
 

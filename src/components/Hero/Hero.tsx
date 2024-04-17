@@ -23,7 +23,7 @@ const Hero = () => {
                 </p>
                 <p className="text-2xl font-body ">Best cooks and best delievery guys all at your service.<br/> Hot tasty food will reach you in few minutes.</p>
                 <div className="flex mt-4">
-                    <button className="bg-[#F54748] text-white py-3 px-6 rounded-[32px] hidden md:block transform hover:translate-y-[-3px] transition-all duration-300">
+                    <button className="bg-[#F54748] text-white py-3 px-6 rounded-[32px] transform hover:translate-y-[-3px] transition-all duration-300">
                         Download App
                     </button>
                     <div className="flex ml-11">

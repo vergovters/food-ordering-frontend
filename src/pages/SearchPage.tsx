@@ -7,6 +7,7 @@ import SearchBar, { SearchForm } from "@/components/SearchBar";
 import SearchResultInfo from "@/components/SearchResultInfo";
 import SearchResultCard from "@/components/SearchResultCard";
 import SortOptionDropdown from "@/components/SortOptionDropdown";
+import Loader from "@/components/Loader/Loader";
 
 
 export type SearchState = {
@@ -68,8 +69,8 @@ const SearchPage = () => {
         }));
       };
 
-    if (isLoading) {
-        <span>Loading ...</span>;
+      if (isLoading) {
+        return <Loader/>
       }
     
       if (!results?.data || !city) {

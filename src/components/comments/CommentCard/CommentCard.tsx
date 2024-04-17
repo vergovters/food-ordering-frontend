@@ -1,9 +1,8 @@
-import React from 'react';
 import styles from './CommentCard.module.css';
-import starred from "../../../assets/filled.svg"
-import unstarred from "../../../assets/unfilled.svg"
 
 
+import { FaStar } from "react-icons/fa";
+import { FaRegStar } from "react-icons/fa";
 
 const CommentCard= (props: any) => {
   function generateArrayWithOnesAndZeros(n: number) {
@@ -25,7 +24,7 @@ const CommentCard= (props: any) => {
         <div className={styles.rating}>
           {generateArrayWithOnesAndZeros(props.rate).map((value, index) => (
             <span key={index} className={value === 1 ? styles.starFilled : styles.starEmpty}>
-              {value === 1 ? <img src={starred} alt="" /> : <img src={unstarred} alt="" />}
+              {value === 1 ? <FaStar className='text-red-500'/> : <FaRegStar className='text-red-500'/>}
             </span>
           ))}
         </div>

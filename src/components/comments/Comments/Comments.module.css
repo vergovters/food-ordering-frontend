@@ -13,14 +13,14 @@
 
 .title {
     font-family: Nunito Sans;
-    font-size: 24px;
+    font-size: 34px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
 .title__span {
-    color: #3586ff;
+    color: rgb(234 179 8);
 }
 
 .comments__posts {
