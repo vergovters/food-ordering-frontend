@@ -6,7 +6,7 @@ const MainNav = () => {
     const {loginWithRedirect, isAuthenticated} = useAuth0()
 
     return(
-        <span className="flex space-x-2 items-center">
+        <span className="flex space-x-7 items-center font-body text-xl">
             {isAuthenticated ? 
             <>
                 <Link to="/order-status">Order Status</Link>
