@@ -114,7 +114,7 @@ const DetailPage = () => {
 
       <div className='flex relative gap-[500px]'>
         <div className='mt-[150px] z-10'>
-          <h2 className='text-6xl font-body font-bold'>Food made from<br/> the <span className='text-red-500'>heart</span></h2>
+          <h2 className='text-6xl font-body font-bold'>Food made from<br/> the <span className='text-yellow-500'>heart</span></h2>
           <p className='fotn-body font-bold text-gray-500 text-lg'>and here to feed the soul</p> 
 
           <div className="flex flex-col gap-10 ml-3">

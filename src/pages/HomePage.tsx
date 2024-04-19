@@ -24,7 +24,7 @@ const HomePage = () => {
             </div>
             <About/>
             <Comments/>
-            <div className="flex flex-col items-center justify-center gap-4 text-center">
+            <div className="flex flex-col items-center justify-center gap-4 text-center mt-[100px]">
                 <span className="font-bold text-[40px] tracking-tighter">
                     It's Now <span className="text-red-500">More Easy</span> to <span className="text-yellow-500">Order</span><br/>
                     by Our Mobile <span className="text-red-500">App</span>

@@ -45,12 +45,16 @@ const UserProfileForm = ({
         <Form {...form}>
             <form
                 onSubmit={form.handleSubmit(onSave)}
-                className=" bg-gray-50 rounded-lg md:p-5 border-solid border-2 border-sky-500 flex"
+                className=" bg-gray-50 rounded-lg md:p-5 border-solid border-2 border-red-500 flex"
 
             >
-                <div>
-                    <img src="https://i.pinimg.com/originals/e8/28/66/e82866c68c3dd3f148320871dbb825b3.jpg" alt="" className="rounded-l-lg"/>
-                </div>
+                {
+                    title === "USER PROFILE" &&
+                        <div>
+                            <img src="https://i.pinimg.com/originals/e8/28/66/e82866c68c3dd3f148320871dbb825b3.jpg" alt="" className="rounded-l-lg"/>
+                        </div>
+                    
+                }
                 <div className="ml-[100px] mt-[100px]">
                         <div className="mt-2 mb-6">
                             <h2 className="text-4xl font-bold">{title}</h2>
@@ -127,7 +131,7 @@ const UserProfileForm = ({
                         {isLoading ? (
                             <LoadingButton />
                             ) : (
-                            <button type="submit" className="bg-blue-500 p-2 rounded-sm w-[600px] text-white mt-5">
+                            <button type="submit" className="bg-red-500 p-2 rounded-sm w-[600px] text-white mt-5">
                                 {buttonText}
                             </button>
                         )}

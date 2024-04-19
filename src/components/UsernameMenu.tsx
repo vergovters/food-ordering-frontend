@@ -14,14 +14,14 @@ const UsernameMenu = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
                 <DropdownMenuItem>
-                    <Link to="/manage-restaurant" className="font-bold hover:text-blue-500">My Restaurant</Link>
+                    <Link to="/manage-restaurant" className="font-bold hover:text-red-500">My Restaurant</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                    <Link to="/user-profile" className="font-bold hover:text-blue-500">Profile</Link>
+                    <Link to="/user-profile" className="font-bold hover:text-red-500">Profile</Link>
                 </DropdownMenuItem>
                 <Separator/>
                 <DropdownMenuItem>
-                    <button className="flex flex-1 font-bold bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700" onClick={async () => logout()}>Log Out</button>
+                    <button className="flex flex-1 font-bold bg-red-500 text-white p-2 rounded-md hover:bg-red-900" onClick={async () => logout()}>Log Out</button>
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
