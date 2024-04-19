@@ -111,43 +111,52 @@ const DetailPage = () => {
       }
 
     return (
-        <div className="flex flex-col gap-10">
-        <AspectRatio ratio={16 / 5}>
-          <img
-            src={restaurant.imageUrl}
-            className="rounded-md object-cover h-full w-full"
-          />
-        </AspectRatio>
-        <div className="grid md:grid-cols-[4fr_2fr] gap-5 md:px-32">
-          <div className="flex flex-col gap-4">
-            <RestaurantInfo restaurant={restaurant} />
-            <span className="text-2xl font-bold tracking-tight">Menu</span>
-            {restaurant.menuItems.map((menuItem) => (
-              <MenuItem
-                menuItem={menuItem}
-                addToCart={() => addToCart(menuItem)}
-              />
-            ))}
-          </div>
-  
-          <div>
-            <Card>
-              <OrderSummary
-                restaurant={restaurant}
-                cartItems={cartItems}
-                removeFromCart={removeFromCart}
-              />
-              <CardFooter>
-                <CheckoutButton
-                  disabled={cartItems.length === 0}
-                  onCheckout={onCheckout}
-                  isLoading={isCheckoutLoading}
-                />
-              </CardFooter>
-            </Card>
+
+      <div className='flex relative gap-[500px]'>
+        <div className='mt-[150px] z-10'>
+          <h2 className='text-6xl font-body font-bold'>Food made from<br/> the <span className='text-red-500'>heart</span></h2>
+          <p className='fotn-body font-bold text-gray-500 text-lg'>and here to feed the soul</p> 
+
+          <div className="flex flex-col gap-10 ml-3">
+            <div className="flex flex-col gap-4">
+                <RestaurantInfo restaurant={restaurant} />
+                <span className="text-2xl font-bold tracking-tight">Menu</span>
+                {restaurant.menuItems.map((menuItem) => (
+                  <MenuItem
+                    menuItem={menuItem}
+                    addToCart={() => addToCart(menuItem)}
+                  />
+                ))}
+              </div>
           </div>
         </div>
-      </div>
+        <div className='bg-red-500 w-[1400px] h-[1400px] absolute rounded-full z-0 right-[-600px] top-[-800px]'>
+
+        </div>
+         <div className='mt-[300px] z-10'>
+               <AspectRatio ratio={16 / 9}>
+                  <img
+                    src={restaurant.imageUrl}
+                    className="rounded-md object-cover h-full w-full"
+                  />
+                </AspectRatio>
+                    <Card>
+                      <OrderSummary
+                        restaurant={restaurant}
+                        cartItems={cartItems}
+                        removeFromCart={removeFromCart}
+                      />
+                      <CardFooter>
+                        <CheckoutButton
+                        
+                          disabled={cartItems.length === 0}
+                          onCheckout={onCheckout}
+                          isLoading={isCheckoutLoading}
+                        />
+                      </CardFooter>
+                    </Card>
+          </div>
+        </div>
     );
   };
 

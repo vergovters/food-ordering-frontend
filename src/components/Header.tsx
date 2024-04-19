@@ -5,8 +5,8 @@ import pan from "../assets/pan.jpg"
 
 export default function Header() {
   return (
-    <div className="py-6">
-        <div className="container flex justify-between items-center">
+    <div className="py-6 bg-white z-10">
+        <div className="container flex justify-between items-center ">
             <Link className="text-2xl font-bold font-serif tracking-tight flex flex-col items-center text-black" to="/">
                 <img src={pan} alt="" className="w-[35px] mb-[-5px]" />
                 GastroHeaven
