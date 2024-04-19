@@ -12,13 +12,13 @@ const Hero = () => {
     
 
     return (
-        <header className="flex justify-center gap-[300px] mt-[150px]">
+        <header className="flex justify-center gap-[300px] mt-[150px] p-3">
               <div className=''>
                 <p className='font-body flex bg-gray-300 p-1 rounded-lg w-fit text-m text-center ml-4 mb-5'>
                     <FaHeart className='bg-red-500 rounded-full p-1 text-yellow-500 mr-1 w-6 h-6'/>
                     People Trust Us
                 </p>
-                <p className="text-[75px] font-bold font-body"> 
+                <p className="text-[45px] font-bold font-body md:text-[70px]"> 
                     We're <span className="text-red-500">Serious</span> For<br/> <span className="text-red-500">Food</span> & <span className="text-yellow-500">Delivery</span>.
                 </p>
                 <p className="text-2xl font-body ">Best cooks and best delievery guys all at your service.<br/> Hot tasty food will reach you in few minutes.</p>
@@ -36,7 +36,7 @@ const Hero = () => {
                     </div>
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative hidden md:block">
                 <div className="rounded-full overflow-hidden w-[400px] h-[400px]">
                     <img src={hero} alt="Rectangular Image" className="w-full h-full object-cover" />
                 </div>
