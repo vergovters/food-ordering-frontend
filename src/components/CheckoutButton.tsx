@@ -45,7 +45,7 @@ const CheckoutButton = ({ onCheckout, disabled, isLoading }: Props) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button disabled={disabled} className="bg-[#F54748] text-white py-3 px-6 rounded-[32px] hidden md:block transform hover:translate-y-[-3px] transition-all duration-300">
+        <button disabled={disabled} className="bg-[#F54748] text-white py-3 px-6 rounded-[32px] transform hover:translate-y-[-3px] transition-all duration-300">
           Go to checkout
         </button>
       </DialogTrigger>

@@ -51,11 +51,11 @@ const UserProfileForm = ({
                 {
                     title === "USER PROFILE" &&
                         <div>
-                            <img src="https://i.pinimg.com/originals/e8/28/66/e82866c68c3dd3f148320871dbb825b3.jpg" alt="" className="rounded-l-lg"/>
+                            <img src="https://i.pinimg.com/originals/e8/28/66/e82866c68c3dd3f148320871dbb825b3.jpg" alt="" className="rounded-l-lg hidden md:block"/>
                         </div>
                     
                 }
-                <div className="ml-[100px] mt-[100px]">
+                <div className="p-5 md:ml-[100px] md:mt-[100px]">
                         <div className="mt-2 mb-6">
                             <h2 className="text-4xl font-bold">{title}</h2>
                             <FormDescription>
@@ -131,7 +131,7 @@ const UserProfileForm = ({
                         {isLoading ? (
                             <LoadingButton />
                             ) : (
-                            <button type="submit" className="bg-red-500 p-2 rounded-sm w-[600px] text-white mt-5">
+                            <button type="submit" className="bg-red-500 p-2 rounded-sm w-full md:w-[600px] text-white mt-5">
                                 {buttonText}
                             </button>
                         )}

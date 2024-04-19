@@ -9,9 +9,9 @@ import redArrow from "../assets/redArrow.png"
 
 const About = () => {
     return (
-        <div className="flex gap-[200px] mt-[300px]">
+        <div className="flex flex-col md:flex-row md:mt-[300px] md:gap-[200px]" >
             <div className="relative">
-                <img src={redArrow} alt="" className="absolute w-[500px] top-[-100px] left-[300px]"/>
+                <img src={redArrow} alt="" className="absolute w-[500px] top-[-100px] left-[300px] hidden md:block"/>
                 <div className="rounded-full overflow-hidden w-[400px] h-[400px] z-10">
                     <img src={chef} alt="Rectangular Image" className="w-full h-full object-cover" />
                 </div>
@@ -49,7 +49,7 @@ const About = () => {
                             <MdOutlinePriceCheck className="mr-2"/>  Best Prices
                         </li>
                     </ul>
-                    <button className="bg-[#F54748] text-white py-3 px-6 rounded-[32px] ml-4 transform hover:translate-y-[-3px] transition-all duration-300 h-fit mt-auto">
+                    <button className="bg-[#F54748] hidden md:block text-white py-3 px-6 rounded-[32px] ml-4 transform hover:translate-y-[-3px] transition-all duration-300 h-fit mt-auto">
                         About Us
                     </button>
                 </div>

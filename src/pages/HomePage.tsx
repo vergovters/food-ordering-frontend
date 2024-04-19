@@ -14,7 +14,7 @@ const HomePage = () => {
     }
     return(
         <div className="flex flex-col gap-12 relative font-body">
-            <div className="bg-white py-8 flex flex-col gap-5 text-center mt-[300px]">
+            <div className="bg-white py-8 flex flex-col gap-5 text-center md:mt-[300px]">
                 <h1 className="text-5xl font-bold tracking-tight font-body">
                     The <span className="text-yellow-500">Best</span> Choice For Your <span className="text-red-500">Food</span>
                 </h1>

@@ -11,6 +11,7 @@ import CheckoutButton from '@/components/CheckoutButton';
 import { UserFormData } from '@/components/forms/user-profile-form/UserProfileForm';
 import { useCreateCheckoutSession } from '@/api/OrderApi';
 import Loader from '@/components/Loader/Loader';
+import { Separator } from '@/components/ui/separator';
 
 export type CartItem = {
     _id: string;
@@ -112,12 +113,12 @@ const DetailPage = () => {
 
     return (
 
-      <div className='flex relative gap-[500px]'>
-        <div className='mt-[150px] z-10'>
-          <h2 className='text-6xl font-body font-bold'>Food made from<br/> the <span className='text-yellow-500'>heart</span></h2>
-          <p className='fotn-body font-bold text-gray-500 text-lg'>and here to feed the soul</p> 
+      <div className='flex flex-col relative md:gap-[500px] md:flex-row'>
+        <div className='md:mt-[150px] mt-3 z-10'>
+          <h2 className='text-6xl font-body font-bold text-white md:text-black'>Food made from<br/> the <span className='text-yellow-500'>heart</span></h2>
+          <p className='fotn-body font-bold md:text-gray-500 text-gray-300 text-lg'>and here to feed the soul</p> 
 
-          <div className="flex flex-col gap-10 ml-3">
+          <div className="flex flex-col gap-10 ml-3 mt-[100px] md:mt-0">
             <div className="flex flex-col gap-4">
                 <RestaurantInfo restaurant={restaurant} />
                 <span className="text-2xl font-bold tracking-tight">Menu</span>
@@ -130,10 +131,10 @@ const DetailPage = () => {
               </div>
           </div>
         </div>
-        <div className='bg-red-500 w-[1400px] h-[1400px] absolute rounded-full z-0 right-[-600px] top-[-800px]'>
+        <div className='bg-red-500 w-[1400px] h-[1400px] absolute rounded-full z-0 right-[-600px] top-[-1100px] md:top-[-800px]'>
 
         </div>
-         <div className='mt-[300px] z-10'>
+         <div className='md:mt-[300px] mt-5 z-10'>
                <AspectRatio ratio={16 / 9}>
                   <img
                     src={restaurant.imageUrl}
