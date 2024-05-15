@@ -12,7 +12,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row md:mt-[300px] md:gap-[200px]" >
             <div className="relative">
                 <img src={redArrow} alt="" className="absolute w-[500px] top-[-100px] left-[300px] hidden md:block"/>
-                <div className="rounded-full overflow-hidden w-[400px] h-[400px] z-10">
+                <div className="rounded-full m-[-25px] overflow-hidden w-[400px] h-[400px] z-10 md:m-0">
                     <img src={chef} alt="Rectangular Image" className="w-full h-full object-cover" />
                 </div>
             </div>
